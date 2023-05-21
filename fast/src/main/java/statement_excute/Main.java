@@ -11,7 +11,7 @@ public class Main {
         Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "JAWSBAR", "1234");
         Statement stmt = con.createStatement();
 
-        boolean selectquery = stmt.execute("SELECT * FROM PRODUCT  WHERE ID BETWEEN 1 AND 5");
+        boolean selectquery = stmt.execute("SELECT A.ID, A.NAME ,A.UPDATED_AT ,A.CONTENTS ,A.PRICE  FROM PRODUCT A WHERE A.ID BETWEEN 1 AND 5");
 
         if(selectquery){
             ResultSet resultSet = stmt.getResultSet();
