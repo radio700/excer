@@ -11,4 +11,14 @@ public class ResultSetMapper {
                         , rs.getNString(4)
                         , rs.getInt(5));
     }
+
+    
+    
+    public static void printRs(ResultSet rs) throws SQLException{
+        System.out.println(rs.getInt(1) + " "
+        + rs.getString(2) + " "
+        + rs.getDate(3) + " "
+        + rs.getString(4) + " " 
+        + rs.getInt(5));
+    }
 }
